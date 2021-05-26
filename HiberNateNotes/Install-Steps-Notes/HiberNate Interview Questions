@@ -1,0 +1,135 @@
+İçindekiler
+1. Temel Düzey Hibernate Mülakat Soruları
+1.1. Soru 1: Hibernate Nedir?
+1.2. Soru 2: JPA nedir?
+1.3. Soru 3: Criteria API nedir?
+1.4. Soru 4: “ORM” nedir?
+1.5. Soru 5: Hibernate’in bazı faydalarından bahsedin.
+1.6. Soru 6: SQL sorgusu oluşturmak için gereken sözdizimi nedir?
+1.7. Soru 7: “Dialect”i tanımlayın.
+1.8. Soru 8: Framework içerisinde eşleştirme belgeleri nerede yer alır?
+1.9. Soru 9: Yeni özel arayüzler ekleyerek dahili arayüzlerin fonksiyonelliği nasıl güçlendirilir?
+1.10. Soru 10: Hibernate’in üç ana bileşenini söyleyin.
+1.11. Soru 11: Hibernate yapılandırma dosyası nedir?
+1.12. Soru 12: “Hibernate Session” nedir?
+1.13. Soru 13: Hibernate nasıl yapılandırılır?
+1.14. Soru 14: SQL sorgusuna kriter eklemenın sözdizimi nedir?
+1.15. Soru 15: Hibernate’teki iki koleksiyon türü hangileridir?
+2. Hibernate Mülakat Soruları: İleri Düzey
+2.1. Soru 1: Hibernate’in JDBC’ye göre bazı avantajlarını sayın.
+2.2. Soru 2: “SessionFactory” nedir?
+2.3. Soru 3: Hibernate’de “caching” yapmanın amacı nedir?
+2.4. Soru 4: Hibernate’de POJO kullanmalı mısınız?
+2.5. Soru 5: Hibernate’deki “persistent class”ları açıklayın.
+2.6. Soru 6: Varsayılan Hibernate şablonlarını kullanmalı mısınız?
+2.7. Soru 7: SQL kullanarak “Join”i Hibernate’de uygulayabilir misiniz?
+2.8. Soru 8: Hibernate’de nesnelerin üç halini sayın.
+2.9. Soru 9: Hibernate’deki varsayılan cache’in adı nedir?
+2.10. Soru 10: Eclipse eklentisinin ana faydası nedir?
+3. Son
+
+Temel Düzey Hibernate Mülakat Soruları
+Rehberimizin ilk bölümü daha basit Hibernate mülakat soruları üzerinde duruyor. İş görüşmenizin başlangıcında karşılaşabileceğiniz sorulara örnekler veriyor. Bu iş görüşmesi soruları ve cevapları hakkında bilgi sahibi olmak mülakatınızın iyi veya kötü geçmesini sağlayacak ana etkenlerden biri haline gelebilir. 
+
+Soru 1: Hibernate Nedir?
+Potansiyel işverenlerinizin framework’ü tanımlama becerinizi test etmesini sağlayacak ilk mülakat soruları arasında alan iyi bir örnek. İş görüşmeniz boyunca “Hibernate nedir?” gibi sizden konsept açıklaması veya tanımlama yapmanızı isteyecek benzer mülakat soruları ile karşılaşabilirsiniz. 
+
+Peki Hibernate nedir?
+
+Hibernate, Java temelli bir framework’tür. Veri tabanı temelli uygulamalar yapmak için tasarlanmıştır. Framework’ün muhteşem özelliklerinden biri (hatta sevilmesinin ana sebeplerinden biri) veri tabanlarını nesneler formunda temsil etmesidir. Bu nesneler herhangi bir SQL bilgisine sahip olmadan da yazılabilir. Bu sayede geliştiriciler ve programcılar zamandan kazanabilirler. Hibernate ayrıca dahili nesne eşleştirmeye de sahiptir. Bu uygulamaların çalışması için gereken kod satırı sayısını minimuma indirir.
+
+Soru 2: JPA nedir?
+JPA, Java Persistence API’nın kısaltmasıdır. Uygulamadaki bağlantısal verileri yönetmek için spesifikasyonlar sağlar. Java spesifikasyonları javax.persistence paketindeki ek açıklamalarla tanımlanır JPA kullanmak bağımsız kod uyarlamalarını yazmaya yardımcı olur. Hibernate mülakat sorularında olabildiğinde çok kısaltma bilmek çok önemlidir.
+
+Soru 3: Criteria API nedir?
+Criteria çok güçlü bir API’dır. Kullanması çok basittir ve criteria nesne bileşiminden varlıklar çağırmak için kullanılır.
+
+Soru 4: “ORM” nedir?
+ORM, “Object-Related Mapping”in (nesne ilişkisel eşleştirme) kısaltmasıdır. Veri manipülasyonunu ve veriye erişimi olabildiğince basite indirgemeyi amaçlar. Bunu nesneleri verilerine göre eşleştirerek gerçekleştirir. Hibernate’in üzerine kurulu olduğu çok basit bir konsepttir ve Java’dan alınmıştır (nesne yönelimli programlama dili olduğu için).
+
+Soru 5: Hibernate’in bazı faydalarından bahsedin.
+Hibernate framework’ü geliştiricilere ve programcılara birçok avantaj sunar. Çok çeşitli seçeneğe sahip olursunuz. İşte en göze çarpanlardan bazıları: JPA ve XML açıklamalarını sdesteklemesi, tamamen nesne yönelimli olması, diğer birçok Java framework’ü ile kolaylıkla entegre edilebilmesi ve otomatik anahtar oluşturma.
+
+Soru 6: SQL sorgusu oluşturmak için gereken sözdizimi nedir?
+Hibernate’de SQL sorgusu oluşturmak için şu sözdizimi satırını kullanmalısınız: 
+
+Session.createSQLQuery
+
+Görüşmeniz sırasında bu ve buna benzer Hibernate mülakat soruları ile karşılaşırsanız şaşırmayın. Sözdizimi Hibernate’in önemli yönlerinden biridir bu yüzden bununla alakalı iş görüşmesi soruları ve cevapları bilmeniz çok önemli.
+
+Soru 7: “Dialect”i tanımlayın.
+Dialect, tek bir dosya veya bir dosya grubundur (çoğu durumda ikincisidir). Bu dosyalar Hibernate veri tabanını Java class’ına bağlamak için kullanılır. Dialect’in Hibernate ve ana veri tabanı arasında bir “çeviri aracı” olarak yer aldığını söyleyebilirsiniz.
+
+Soru 8: Framework içerisinde eşleştirme belgeleri nerede yer alır?
+Hibernate’in tüm eşleştirme belgeleri Configuration Interface olarak bilinen şeyin içerisinde yer alır. Bu arayüz hem az önce adı geçen belgeleri depolamada hem de framework’ün kendisine belli yapılandırma komutları vermek için kullanılır.
+
+Bu tuzak Hibernate mülakat soruları arasında yer alıyor diyebilirsiniz. Çoğu işveren size “Hibernate’de Configuration Interface nedir?” diye sorabilir. Ancak yukarıdaki soru arayüzün asıl fonksiyonlarıyla alakalı. Doğru ve hızlı cevap vermek için Configuration Interface’i gerçekten bilmeniz gerekiyor. Bu yüzden benzer sorulara dikkat edin!
+
+Soru 9: Yeni özel arayüzler ekleyerek dahili arayüzlerin fonksiyonelliği nasıl güçlendirilir?
+Kullanıcı, dahili olanların desteklemediği gerekli fonksiyonlar için eklenti arayüzlerini kullanabilir.
+
+Soru 10: Hibernate’in üç ana bileşenini söyleyin.
+Seçebileceğiniz üçten fazla bileşen mevcut bu yüzden soruya cevap verirken sorun yaşamayacaksınız. Örnek olarak session, yukarıda bahsettiğimiz configuration ve query diyebilirsiniz.
+
+Soru 11: Hibernate yapılandırma dosyası nedir?
+Yapılandırma dosyası belli yapılandırmaların veri tabanını içerir ve Session Factory’i başlatmak için kullanılır. XML yapılandırma dosyasında kullanıcı veri tabanı kullanıcı bilgilerini veya JNDI (Java Naming and Directory Interface) kaynak bilgilerini sağlar. Hibernate yapılandırma dosyasının diğer bir önemli bölümü de Dialect bilgileridir. Bu bilgiler Hibernate’in veri tabanı türünü, eşleştirme dosyasını veya class ayrıntılarını bilmesini sağlar.
+
+Soru 12: “Hibernate Session” nedir?
+Session (oturum), Hibernate framework’ü içerisindeki veri tabanı işlemlerini gerçekleştiren ana araçtır. SQL ve HQL temelli sorguları oluşturmak, komutlandırmak ve çalıştırmak için kullanılan ana araçtır.
+
+Buna benzer Hibernate sorularında açıklamalar yapabilirsiniz. Hibernate’deki Session’ın thread safe olmadığını dile getirebilirsiniz. Bu Session’la alakalı her bir thread’in kendi “Session instance”ını oluşturup kullanması gerektiği anlamına gelir. Böylelikle iş bittikten sonra güvenli hale gelir.
+
+Soru 13: Hibernate nasıl yapılandırılır?
+Hızlıca vermeniz gereken cevap iki ana yol olduğu, XML kullanarak ve Java’nın sağladığı ek bilgiler aracılığıyla gerçekleştirilebileceğidir. Ancak bu soru tuzak Hibernate mülakat sorularından biri olabilir. Peki nasıl?
+
+Hibernate 4.0’dan önceki Hibernate sürümlerinde framework’ü yapılandırmanın tek yolu XML kullanmaktı. Java temelli ek açıklamalarla gerçekleştirebilme seçeneği 4.0 ve sonraki sürümlerde kullanılabilir hale geldi. Bu yüzden mülakatı gerçekleştiren kişinin sorduğu soruyu dikkatli dinlemeniz gerekiyor. Soruda framework sürümü belirtti mi? Hangi sürümlerden bahsediyor? Tabii ki en garanti cevap her iki yapılandırma yönteminden de bahsedip verip teker teker açıklamaktır. İşverenleriniz kesinlikle etkilenecektir!
+
+Soru 14: SQL sorgusuna kriter eklemenın sözdizimi nedir?
+Sözdizimi şöyle olmalıdır:
+
+Session.createCriteria
+
+Soru 15: Hibernate’teki iki koleksiyon türü hangileridir?
+Hibernate’deki iki koleksiyon türü Sorted ve Order’dır.
+
+
+Soru 1: Hibernate’in JDBC’ye göre bazı avantajlarını sayın.
+JDBC Java Database Connection’ın kısaltmasıdır. Hibernate’in JDBC’ye göre birkaç avantajı vardır. Bunlardan ön göze çarpanları şunlardır: Veri tabanı değiştiğinde yeni sürücüler indirmeye ihtiyaç duymama, hem SQL’i hem de SQL’i kavrama (JDBC sadece SQL’den faydalanabiliyor), önceden yüklenmiş sürücüler vb.
+
+Soru 2: “SessionFactory” nedir?
+Bunu sakın Session ile karıştırmayın. SessionFactory, Session’a örnekler sağlayan şeydir. Hibernate’te varsayılan olmayan tüm veriler ve bilgiler SessionFactory’de saklanır.
+
+Soru 3: Hibernate’de “caching” yapmanın amacı nedir?
+Hibernate’de caching yapmak uygulamanızın çok daha hızlı çalışmasını sağlar. Caching uygulamanın başarılı çalışması için gereken sorgu sayısını azaltır. Böylelikle performans oranı ve hız artar.
+
+Soru 4: Hibernate’de POJO kullanmalı mısınız?
+Bu soru ikili Hibernate mülakat soruları arasında yer alabilir çünkü doğru cevap vermek için POJO’nun ne olduğunu bilmeniz gerekiyor.
+
+POJO, Plain Old Java Object’in kısaltmasıdır. Bu nesneler belli bir classpath’e ihtiyaç duymaz. Bu yüzden herhangi bir şekil veya formla sınırlandırılmazlar. Hibernate projelerinizde POJO’lar kullanmanız tavsiye edilir. Bunun sebebi POJO’ların standart Java class’larına göre daha iyi çalışan ve daha akıcı kodlar sağlamasıdır.
+
+Soru 5: Hibernate’deki “persistent class”ları açıklayın.
+Persistent class’lar verilerini (nesneleri) Hibernate framework’ün veri tabanında saklayan Java class’larıdır. Normal olarak çalışabilmesi için ayarlanmış bir yapıcıya ihtiyaç duydukları için özeldirler. Proxies (ana Hibernate fonksiyonlarının bazıları) persistent class’ların iş akışına ciddi anlamda bağımlıdır.
+
+Birçok geliştirici böyle iş görüşmelerinde cevaplarınızı, özellikle de ileri düzey bir soru geldiyse, her zaman açıklamanızın tavsiye eder. Böylelikle sadece cevabı bildiğinizi değil konuya genel olarak hakim olduğunuzu da gösterirsiniz. Bu yöntem bu gibi sorularda hayati önem taşır. Doğru cevabı verin sonra 2-3 ek cümleyle açıklayın. Böyle yaptığınız takdirde işverenlerinizde iyi bir izlenim bırakırsınız.
+
+Soru 6: Varsayılan Hibernate şablonlarını kullanmalı mısınız?
+Daha öznel Hibernate mülakat soruları arasında yer alıyor gibi görünse de işverenleriniz Hibernate şablonlarının genel artılarını bilip bilmediğinizi öğrenmek isteyeceklerdir.
+
+Hibernate şablonları kullanmanın ana avantajlarından biri pek çok fonksiyonun otomatik olmasıdır (Session kapatma, belli istisnalarla baş etme). Aksi takdirde bunları manuel olarak gerçekleştirirsiniz. Ek olarak bu şablonlar Hibernate kullanımını ciddi anlamda basitleştirir.
+
+Soru 7: SQL kullanarak “Join”i Hibernate’de uygulayabilir misiniz?
+Evet. Hem SQL hem de HQL sorgularını Hibernate’de Join uygulamak için kullanabilirsiniz.
+
+Soru 8: Hibernate’de nesnelerin üç halini sayın.
+Kapsamlı Hibernate mülakat sorularından biridir. Toplamda üç nesne hali vardır: Detached, persistent ve transient.
+
+Session geliştirici tarafından kapatıldığı zaman nesneler detached olur. Detached nesneler belli yöntemler etkinleştirilerek persistent hale getirilebilir. Persistent nesneler açık olanlardır. Hibernate veri tabanından belli örnekleri kaydettiğinizde veya aldığınızda oluşurlar. Transient nesneler “garip olanlar”dır. Oluşlurulmuş ama belli bir Session tarafındna daha fark edilmemiş nesnelerdir.
+
+Soru 9: Hibernate’deki varsayılan cache’in adı nedir?
+Hibernate framework’ündeki varsayılan cache EHCache’dir.
+
+Soru 10: Eclipse eklentisinin ana faydası nedir?
+Eklenti geliştiricilere varsayılan Hibernate yöntemlerine kıyasla daha kolay bir şekilde dosya yazma ve yönetme fırsatı sunar.
+
+
+

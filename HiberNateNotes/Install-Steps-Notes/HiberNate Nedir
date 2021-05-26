@@ -1,0 +1,31 @@
+Hibernate Nedir? Hibernate Framework Avantajları - Java Dersleri
+Hibernate, veritabanı ile etkileşim kurmak için Java uygulama geliştirmelerini kolaylaştıran bir Java Frameworku’dur. Hibernate açık kaynak kodlu, hafif, ORM (Nesne İlişkisel Haritalama/Eşleme (Object Relational Mapping) ) aracıdır. Hibernate, veri sürekliliği için JPA’nın tanımlamalarını uygular.
+
+ORM Tool Nedir?
+ORM tool (aracı), veri oluşturma, veri değiştirme ve veri erişimini basitleştirir. Veritabanı üzerinde saklanan verilere nesne eşleyen bir programlama tekniğidir.
+
+Hibernate ORM Tool Şeması
+Hibernate ORM Tool Şeması
+ORM tool, veritabanıyla etkileşim kurmak için JDBC API kullanır.
+
+JPA Nedir?
+Java Persistence API (JPA), ORM araçlarına (tools) belirli fonksiyonellik ve standart sağlayan bir Java spesifikasyonudur. javax.persistence paketi, JPA sınıfları ve arayüzlerini içerir.
+
+Hibernate Framework Avantajları
+Açık Kaynak Kodlu ve Hafif (Open Source and Lightweight)
+Hibernate framework’u LGPL lisansı altında açık kaynak kodludur ve hafiftir.
+
+Hızlı Performans (Fast Performance)
+Hibernate Framework’nun performansı hızlıdır çünkü cache (önbellek) kullanılır. Hibernate Framework’te iki tür cache vardır: İlk Seviye Cache ve İkinci Seviye Cache. İlk Seviye Cache varsayılan olarak gelmektedir.
+
+Veritabanı Bağımsız Sorgu (Database Independent Query)
+HQL (Hibernate Query Language (Hibernate Sorgu Dili)) SQL’in nesne yönelimli bir versiyonudur. Veritabanından bağımsız sorgular üretir. Böylece, veritabanına özgü sorgular yazmanıza gerek yoktur. Hibernate’den önce, proje için veritabanı değiştirilirse, bakım problemlerine yol açan SQL sorgusunu da değiştirmemiz gerekir.
+
+Otomatik Tablo Oluşturma (Automatic Table Creation)
+Hibernate Framework, veritabanı tablolarını otomatik olarak oluşturmak için kolaylık sağlar. Bu yüzden, veritabanındaki tabloları manuel olarak eklenmesine gerek yoktur.
+
+Karmaşık Birleşmeyi Basitleştirir (Simplifies Complex Join)
+Hibernate Framework’te birçok tablodan veri çekmek, kolaydır.
+
+Sorgu İstatistikleri ve Veritabanı Durumunu Sağlar (Provides Query Statistics and Database Status)
+Hibernate, sorgu önbelleğini (cache) destekler ve sorgu ve veritabanı durumu hakkında istatistikler sağlar.
