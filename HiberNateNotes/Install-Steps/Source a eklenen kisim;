@@ -1,0 +1,12 @@
+Source a eklenen kisim;
+
+	<!--If you type "update" below, it updates table in every run -->
+       	<!--If you type "create" below, it ucreates table in every run -->
+
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- In the below code, if you type “true” it displays SQL Codes on the console -->
+        <!-- In the below code, if you type “false” it does not display SQL Codes on the console -->
+
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
